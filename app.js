@@ -1,52 +1,35 @@
-// inputNumberOne = document.querySelector("#input-number-one");
-// inputNumberTwo = document.querySelector("#input-number-two");
+const numberOne = document.querySelector("#input-number-one");
+const numberTwo = document.querySelector("#input-number-two");
+const output = document.querySelector("#output");
+const addBtn = document.querySelector("#btn-addition");
+const subtractBtn = document.querySelector("#btn-substraction");
+const multiplyBtn = document.querySelector("#btn-multiply");
+const divisionBtn = document.querySelector("#btn-divide");
 
-// outputResult = document.querySelector("#output");
+function clickHandler(operator) {
+  const one = Number(numberOne.value);
+  const two = Number(numberTwo.value);
 
-// btnAddition = document.querySelector("#btn-addition");
-// btnSubstraction = document.querySelector("#btn-substraction");
-// btnMultiplication = document.querySelector("#btn-multiply");
-// btnDivision = document.querySelector("#btn-divide");
-
-// function addHandler() {
-//   outputResult.innerText =
-//     Number(inputNumberOne.value) + Number(inputNumberTwo.value);
-// }
-
-// function substractHandler() {
-//   outputResult.innerText =
-//     Number(inputNumberOne.value) - Number(inputNumberTwo.value);
-// }
-// function multiplicationHandler() {
-//   outputResult.innerText =
-//     Number(inputNumberOne.value) * Number(inputNumberTwo.value);
-// }
-// function divisionHandler() {
-//   outputResult.innerText =
-//     Number(inputNumberOne.value) / Number(inputNumberTwo.value);
-// }
-
-// btnAddition.addEventListener("click", addHandler);
-// btnSubstraction.addEventListener("click", substractHandler);
-// btnMultiplication.addEventListener("click", multiplicationHandler);
-// btnDivision.addEventListener("click", divisionHandler);
-
-//ques3
-
-inputText = document.querySelector("#input-text");
-outputText = document.querySelector("#output");
-
-fontIncrease = document.querySelector("#font-increase");
-fontDecrease = document.querySelector("#font-decrease");
-
-function clickHandlerIncreaseFontSize() {
-  outputText.innerText = inputText.value;
-  console.log(outputText.getComputeStyle);
-  console.log("+");
+  if (operator === "+") {
+    output.innerText = one + two;
+  } else if (operator === "-") {
+    output.innerText = one - two;
+  } else if (operator === "*") {
+    output.innerText = one * two;
+  } else {
+    output.innerText = one / two;
+  }
 }
 
-function clickHandlerDecreaseFontSize() {
-  outputText.style.fontSize -= "2rem";
-}
-fontIncrease.addEventListener("click", clickHandlerIncreaseFontSize);
-fontDecrease.addEventListener("click", clickHandlerDecreaseFontSize);
+addBtn.addEventListener("click", () => {
+  clickHandler("+");
+});
+subtractBtn.addEventListener("click", () => {
+  clickHandler("-");
+});
+multiplyBtn.addEventListener("click", () => {
+  clickHandler("*");
+});
+divisionBtn.addEventListener("click", () => {
+  clickHandler("/");
+});
