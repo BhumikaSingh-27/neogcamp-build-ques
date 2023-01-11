@@ -32,3 +32,23 @@ function checkPrime(number) {
 }
 
 checkPrime(userInput);
+
+//a program to return a Fibonacci series : 0,1,1,2,3,5,8,13,21....
+
+function getFibo() {
+  let numOne = 0;
+  let numTwo = 1;
+  let i = 0;
+  let sum = 0;
+  console.log(numOne);
+  console.log(numTwo);
+  while (true) {
+    sum = numOne + numTwo;
+    console.log(sum);
+    numOne = numTwo;
+    numTwo = sum;
+    i++;
+  }
+}
+
+getFibo();
