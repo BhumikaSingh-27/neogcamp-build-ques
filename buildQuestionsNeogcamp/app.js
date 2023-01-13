@@ -52,3 +52,32 @@ function getFibo() {
 }
 
 getFibo();
+
+//program to take a day as an input and determine whether it is a weekday or weekend. Example: Tuesday is weekday.
+var readlineSync = require("readline-sync");
+const day = readlineSync.question("enter the day\n")
+
+const daysInWeek = ["sunday","monday","tuesday","wednesday","thursday","friday","saturday"];
+
+function checkWeek(day){
+
+    for( let i = 0 ; i<daysInWeek.length ;i++){
+      
+        if ((day.toLowerCase) === daysInWeek[i].toLowerCase){
+          var index =daysInWeek.indexOf(day)
+        //   console.log(index)
+            if ( index ===0 || index === 6){
+                console.log(`${day} is a weekend`);
+              break;
+            }else{
+                console.log(`${day} is a weekday`)
+              break;
+            }
+        }
+      else{
+        continue
+      }
+    }
+}
+
+checkWeek(day)
