@@ -153,7 +153,23 @@ console.log(char);
 
 
 //Given two dates, your function should return which one comes before the other.
-function  minDate(dateOne, dateTwo){
-    
+
+function minDate(dateOne, dateTwo) {
+  const firstDate = dateOne.split("/")
+  const secondDate = dateTwo.split("/")
+  for (let i = 2; i >= 0; i--) {
+    if (firstDate[i] !== secondDate[i]) {
+      if (firstDate[i] > secondDate[i]) {
+        console.log(dateTwo);
+        break;
+      } else {
+        console.log(dateOne)
+      }
+    }
+    else{
+      continue;
+    }
+  }
 }
-minDate('02/05/2021', '24/01/2021')
+minDate('02/01/2021', '24/01/2021')
+
