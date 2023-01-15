@@ -64,4 +64,4 @@ function reverseCharactersOfWord(sentence) {
   return reversedArray;
 }
 
-console.log(reverseCharactersOfWord("we are"));
+console.log(reverseCharactersOfWord("we are neoGrammers"));
