@@ -17,3 +17,5 @@ var avg = function(arr){
 }
 
 console.log([1,2,3,4])
+
+//Find maximum and minimum of an array
