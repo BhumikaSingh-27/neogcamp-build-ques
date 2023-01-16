@@ -34,24 +34,22 @@ const finalSentence = toSentenceCase("we are neoGrammers");
 console.log(finalSentence);
 
 //Given an array of numbers, your function should return an array in the ascending order.
-
-const sortedArray = function (arr) {
-  let len = arr.length;
-  let i = 0;
-  let j = 1;
-  while (j < len) {
-    if (arr[i] > arr[j]) {
-      let swap = arr[j];
-      arr[j] = arr[i];
-      arr[i] = swap;
-      i++;
-      j++;
+//Bubble sort
+const data = [23, 14, 56, 6];
+function sortArray(data) {
+  for (let i = 0; i < data.length; i++) {
+    for (let j = 0; j < data.length; j++) {
+      if (data[j] > data[j + 1]) {
+        let temp = data[j];
+        data[j] = data[j + 1];
+        data[j + 1] = temp;
+      }
     }
   }
-  return arr;
-};
+  return data;
+}
 
-console.log(sortedArray([100, 83, 32, 9, 45, 61]));
+console.log(sortArray(data));
 
 //Given a sentence, your function should reverse the order of characters in each word, keeping same sequence of words.
 function reverseCharactersOfWord(sentence) {

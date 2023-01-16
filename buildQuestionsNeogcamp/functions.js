@@ -143,7 +143,7 @@ const arr2 = [7, 8, 9];
 const mergedArray = mergeArray(arr1, arr2);
 console.log(mergedArray);
 
-//--function to return the character present at that index in the string for given a string and an index.
+//function to return the character present at that index in the string for given a string and an index.
 function characterAt(str, index) {
   return str[index];
 }
