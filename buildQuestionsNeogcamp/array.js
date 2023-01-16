@@ -73,19 +73,36 @@ console.log(calculateSum([3, 5, 2, 9, 4], [6, 2, 8, 1, 3]));
 //Find number of constants and vowels in a string.
 
 function check(str) {
-    const vowels = ["a", "e", "i", "o", "u"];
-    let countVowel = 0;
-    let countConso = 0;
-    for (let s of str) {
-      
-      if (vowels.indexOf(s) !== -1) {
-        countVowel++;
-      } else {
-        countConso++;
-      }
+  const vowels = ["a", "e", "i", "o", "u"];
+  let countVowel = 0;
+  let countConso = 0;
+  for (let s of str) {
+    if (vowels.indexOf(s) !== -1) {
+      countVowel++;
+    } else {
+      countConso++;
     }
-    console.log(`constants:${countConso} vowels:${countVowel}`);
   }
-  
-  check("hello");
-  
+  console.log(`constants:${countConso} vowels:${countVowel}`);
+}
+
+check("hello");
+
+//Shift an array by X to right.
+// Example [1,2,3,4,5] after shifting to right [5,1,2,3,4]
+
+function shiftArray(arr, n) {
+  while (n != 0) {
+    const eleToShift = arr.pop();
+    arr.unshift(eleToShift);
+    n--;
+  }
+  console.log(arr);
+}
+
+shiftArray([1, 2, 3, 4, 5], 2);
+
+//Advanced
+// Find the sum of two matrix.
+// Display transpose of matrix. 
+// Find Identity matrix
