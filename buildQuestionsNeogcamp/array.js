@@ -47,3 +47,45 @@ var findMin = function (arr) {
 
 console.log(findMax([1, 5, 3, 8]));
 console.log(findMin([1, 5, 3, 8]));
+
+//Find Median and Mode of an array.
+// Median : (N+1/2)th term.
+// Mode : Most repeating term
+
+// Find sum of two arrays.
+// [3,5,2,9,4] = 3+5+2+9+4 = 23
+// [6,2,8,1,3] = 6+2+8+1+3 = 20
+// Final Output : 20+23 = 43
+
+function sum(arr) {
+  return arr.reduce((acc, cur) => acc + cur, 0);
+}
+// console.log(sum([1,2,3]))
+
+function calculateSum(arr1, arr2) {
+  const sumOne = sum(arr1);
+  const sumTwo = sum(arr2);
+  return sumOne + sumTwo;
+}
+
+console.log(calculateSum([3, 5, 2, 9, 4], [6, 2, 8, 1, 3]));
+
+//Find number of constants and vowels in a string.
+
+function check(str) {
+    const vowels = ["a", "e", "i", "o", "u"];
+    let countVowel = 0;
+    let countConso = 0;
+    for (let s of str) {
+      
+      if (vowels.indexOf(s) !== -1) {
+        countVowel++;
+      } else {
+        countConso++;
+      }
+    }
+    console.log(`constants:${countConso} vowels:${countVowel}`);
+  }
+  
+  check("hello");
+  
