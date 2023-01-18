@@ -43,7 +43,7 @@ console.log(ConvertToInt("123"));
 // console.log(_.toInteger("123"))
 
 //a program to delete all vowels from a string. Assume string is not more than 80 characters long
-//IN PROGRESS 
+//IN PROGRESS
 var deleteVowels = function (str) {
   const vowel = ["a", "e", "o", "i", "u"];
   const array = str.split("");
@@ -55,3 +55,45 @@ var deleteVowels = function (str) {
 };
 
 deleteVowels("hello");
+
+//program to check whether the string is alphanumeric or not , eg:batman@45 contains digit 45
+var isAlphaNumberic = function (str) {
+  for (let i = 0; i < str.length; i++) {
+    let code = str[i].charCodeAt();
+    if (typeof str === "String") {
+      if (code >= 48 || code <= 57) {
+        console.log("string is alphanumberic");
+      } else {
+        console.log("not alpha numberic");
+      }
+    }
+  }
+};
+
+console.log(isAlphaNumberic("batman@23"));
+
+//  A program that reads three strings and prints the longest and smallest one
+
+function checkStrLength(str1, str2, str3) {
+  if (str1.length > str2.length) {
+    if (str1.length > str3.length) {
+      console.log(str1);
+      console.log(str2.length < str3.length ? str2 : str3);
+    } else {
+      console.log(str3);
+    }
+  } else {
+    if (str2.length > str3.length) {
+      console.log(str2);
+      console.log(str1.length < str3.length ? str1 : str3);
+    } else {
+      console.log(str3);
+    }
+  }
+}
+
+var stringOne = "Hello";
+var stringTwo = "Goodmorning";
+var stringThree = "Even";
+
+checkStrLength(stringOne, stringTwo, stringThree);
