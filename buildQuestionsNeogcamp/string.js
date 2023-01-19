@@ -57,6 +57,7 @@ var deleteVowels = function (str) {
 deleteVowels("hello");
 
 //program to check whether the string is alphanumeric or not , eg:batman@45 contains digit 45
+//inprogress..
 var isAlphaNumberic = function (str) {
   for (let i = 0; i < str.length; i++) {
     let code = str[i].charCodeAt();
@@ -97,3 +98,23 @@ var stringTwo = "Goodmorning";
 var stringThree = "Even";
 
 checkStrLength(stringOne, stringTwo, stringThree);
+
+//A program that counts number of vowels and consonants in a String
+const vowels = ["a", "e", "o", "i", "u"]
+const countLetters = new Object();
+function countVowelsAndConsonants(str){
+    let countC=0;
+    let countV=0;
+    let array = str.split("")
+    for(i=0;i<str.length;i++){
+        if(vowels.indexOf(str[i]) !== -1){
+            countV++;
+
+        }else{
+            countC++;
+        }
+    }
+        
+console.log(`vowels:${countV} consonants:${countC}`)
+}
+countVowelsAndConsonants("Helloo")
