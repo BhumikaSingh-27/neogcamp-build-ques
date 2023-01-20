@@ -112,9 +112,23 @@ function countVowelsAndConsonants(str){
 
         }else{
             countC++;
-        }
     }
         
 console.log(`vowels:${countV} consonants:${countC}`)
 }
 countVowelsAndConsonants("Helloo")
+
+//Write a program that takes two strings and copies smaller string into bigger string
+function functioncoptStr(str1,str2){
+    let newStr="";
+    if(str1.length>str2.length){
+        newStr=str2+str1
+        // console.log(str1)
+    }else{
+        newStr=str1+str2
+    }
+    return newStr
+}
+
+const stringCopied = functioncoptStr("hello","bhumika");
+console.log(stringCopied)
