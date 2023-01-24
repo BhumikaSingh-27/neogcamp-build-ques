@@ -133,4 +133,11 @@ function functioncoptStr(str1,str2){
 const stringCopied = functioncoptStr("hello","bhumika");
 console.log(stringCopied)
 
-//
+//Write a program that removes the time from the given date string "Wed April 15, 7pm". It should return only the date without the time.
+
+var giveDate = function(str){
+  let date = str.split(",");
+  console.log(date[0])
+}
+
+giveDate("Wed April 15, 7pm")
