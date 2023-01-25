@@ -59,19 +59,21 @@ deleteVowels("hello");
 //program to check whether the string is alphanumeric or not , eg:batman@45 contains digit 45
 //inprogress..
 var isAlphaNumberic = function (str) {
+  let flag = 0;
   for (let i = 0; i < str.length; i++) {
     let code = str[i].charCodeAt();
-    if (typeof str === "String") {
-      if (code >= 48 || code <= 57) {
-        console.log("string is alphanumberic");
-      } else {
-        console.log("not alpha numberic");
-      }
-    }
+    if ((code >= 48 && code <= 57 )&&(code>=65 && code<=90) || (code>=97 && code<=122)) {
+        flag=1;
+      } 
+  }
+  if(flag === 1){
+    console.log("alphanumberic")
+  }else{
+    console.log("not alphanumberic")
   }
 };
 
-console.log(isAlphaNumberic("batman@23"));
+isAlphaNumberic("batman@23");
 
 //  A program that reads three strings and prints the longest and smallest one
 
