@@ -31,7 +31,6 @@ function countChar(str) {
 countChar("helloneogrammers");
 
 // a program that converts string like "124" to 124
-
 var ConvertToInt = function (str) {
   return parseInt(str);
 };
@@ -44,20 +43,30 @@ console.log(ConvertToInt("123"));
 
 //a program to delete all vowels from a string. Assume string is not more than 80 characters long
 //IN PROGRESS
+// var deleteVowels = function (str) {
+//   const vowel = ["a", "e", "o", "i", "u"];
+//   const array = str.split("");
+//   for (let i = 0; i < str.length; i++) {
+//     if (vowel.indexOf(s[i]) !== -1) {
+//       console.log(array.splice(i, 1));
+//     }
+//   }
+// };
+
 var deleteVowels = function (str) {
-  const vowel = ["a", "e", "o", "i", "u"];
-  const array = str.split("");
-  for (let i = 0; i < str.length; i++) {
-    if (vowel.indexOf(s[i]) !== -1) {
-      console.log(array.splice(i, 1));
+  const vowel = ["a", "e", "o", "i", "u","A","E","O","I","U"];
+  let newStr = ""
+  for(let i=0;i<str.length ;i++){
+    if(!vowel.includes(str[i])){
+newStr+=str[i];
     }
   }
-};
-
-deleteVowels("hello");
+  return newStr;
+}
+console.log(deleteVowels("hello"))
 
 //program to check whether the string is alphanumeric or not , eg:batman@45 contains digit 45
-//inprogress..
+
 var isAlphaNumberic = function (str) {
   let flag = 0;
   for (let i = 0; i < str.length; i++) {
